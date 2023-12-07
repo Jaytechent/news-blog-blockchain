@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import "./navbar.css";
 
 const Navbar = () => {
   const links = [
@@ -7,27 +8,25 @@ const Navbar = () => {
     "health",
     "finance",
     "sport",
-    "technology",
-    "entertainment",
-    "blockchain",
-    "coinprice",
+    "technews",
+    "coins",
+    "music",
+    "crypto",
   ];
 
   return (
-    <div className="shadow-md flex items-center justify-between h-16 px-8 bg-blue-100">
-      <div className="flex items-center space-x-4">
-        <NavLink to="/">
-          {" "}
-          <img
-            src="https://yt3.googleusercontent.com/ytc/APkrFKauPr9uhUAD6EfuXUVng8oTpnLcdizjjmVSk1x0=s176-c-k-c0x00ffffff-no-rj"
-            alt="Jaytechent brand logo"
-            sizes="1rem"
-            className="h-8 "
-          />{" "}
-        </NavLink>
-      </div>
+    <div className="shadow-md flex items-start lg:items-center gap-2 justify-between px-4 bg-blue-100">
+      <NavLink to="/">
+        {" "}
+        <img
+          src="https://yt3.googleusercontent.com/ytc/APkrFKauPr9uhUAD6EfuXUVng8oTpnLcdizjjmVSk1x0=s176-c-k-c0x00ffffff-no-rj"
+          alt="Jaytechent brand logo"
+          sizes="1rem"
+          className="h-8 "
+        />{" "}
+      </NavLink>
 
-      <div className="flex items-center space-x-8">
+      <div className="flex  items-center gap-2 flex-wrap">
         {links.map((item) => (
           <button className="  border-r-8">
             {" "}

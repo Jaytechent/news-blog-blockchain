@@ -19,11 +19,11 @@ const App = () => {
 
           <Route path="/sport" element={<SportPage />} />
           <Route path="/health" element={<TravelPage />} />
-          <Route path="/entertainment" element={<Entertainment />} />
+          <Route path="/music" element={<Entertainment />} />
           <Route path="/finance" element={<FinancePage />} />
-          <Route path="/technology" element={<Technology />} />
-          <Route path="/blockchain" element={<BlockchainPage />} />
-          <Route path="/coinprice" element={<CoinPrice />} />
+          <Route path="/technews" element={<Technology />} />
+          <Route path="/crypto" element={<BlockchainPage />} />
+          <Route path="/coins" element={<CoinPrice />} />
         </Route>
       </Routes>
     </div>
