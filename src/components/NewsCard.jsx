@@ -29,9 +29,6 @@ const NewsCard = ({
     <div>
       <Card
         hoverable
-        style={{
-          width: 240,
-        }}
         cover={
           <img
             className="h-32"

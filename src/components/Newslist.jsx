@@ -67,17 +67,16 @@ function NewsList({ category }) {
       <div className="flex place-content-center gap-2 font-extrabold ">
         <p className=" font-sans text-purple-950 "></p>
       </div>
-      <div className="flex flex-wrap justify-center">
-        {data.map((item) => (
-          <div
-            key={item._id}
-            className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 p-2"
-          >
-            {/* Content for each NewsCard in a separate column */}
-            <NewsCard {...item} />
-          </div>
-        ))}
-      </div>
+      <section className="max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {data.map((item) => (
+            <div key={item._id}>
+              {/* Content for each NewsCard in a separate column */}
+              <NewsCard {...item} />
+            </div>
+          ))}
+        </div>
+      </section>
     </>
   );
 }

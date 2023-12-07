@@ -8,7 +8,7 @@ const MainLayout = () => {
     <div>
       <Navbar />
 
-      <div className="flex place-content-center gap-2 font-extrabold ">
+      <div className="flex place-content-center font-extrabold ">
         <HomeFilled />
         <p className=" font-sans text-purple-950 ">THE GAWK HOUSE NEWS</p>
       </div>
