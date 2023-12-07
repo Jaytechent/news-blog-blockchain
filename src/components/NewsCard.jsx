@@ -1,5 +1,6 @@
 import React from "react";
 import { Card } from "antd";
+
 const { Meta } = Card;
 
 const NewsCard = ({
@@ -10,6 +11,20 @@ const NewsCard = ({
   shortLink,
   sourceName,
 }) => {
+  // Function to convert publishedAt to hours ago or just now
+  const getTimeAgo = (publishedAt) => {
+    const now = new Date();
+    const publishedDate = new Date(publishedAt);
+    const timeDifference = now - publishedDate;
+    const hoursAgo = Math.round(timeDifference / (1000 * 60 * 60));
+
+    if (hoursAgo < 1) {
+      return "Just now";
+    } else {
+      return `${hoursAgo} hours ago`;
+    }
+  };
+
   return (
     <div>
       <Card
@@ -30,7 +45,10 @@ const NewsCard = ({
         }
       >
         <Meta title={title} description={shortLink} />
-        <p> {publishedAt}</p>
+        <p className=" font-semibold text-red-600">
+          {" "}
+          {getTimeAgo(publishedAt)}
+        </p>
 
         <p>{sourceName}</p>
         <button>
@@ -47,4 +65,5 @@ const NewsCard = ({
     </div>
   );
 };
+
 export default NewsCard;
