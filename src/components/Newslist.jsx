@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { HomeFilled, HomeOutlined } from "@ant-design/icons";
 import { baseurl } from "../utils/helper";
 import NewsCard from "./NewsCard";
 import { Spin } from "antd";
@@ -63,15 +64,20 @@ function NewsList({ category }) {
 
   return (
     <>
-      {data.map((item) => (
-        <div
-          key={item._id}
-          className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 p-2"
-        >
-          {/* Content for each NewsCard in a separate column */}
-          <NewsCard {...item} />
-        </div>
-      ))}
+      <div className="flex place-content-center gap-2 font-extrabold ">
+        <p className=" font-sans text-purple-950 "></p>
+      </div>
+      <div className="flex flex-wrap justify-center">
+        {data.map((item) => (
+          <div
+            key={item._id}
+            className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 p-2"
+          >
+            {/* Content for each NewsCard in a separate column */}
+            <NewsCard {...item} />
+          </div>
+        ))}
+      </div>
     </>
   );
 }
